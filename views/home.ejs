@@ -1,0 +1,82 @@
+<%- include('partials/header'); -%>
+
+<body>
+<div class="container">
+  <div class="input" id="input">
+    <input type="text" id="intervalTime" value="60" style="font-size: 32px;">
+    <label for="intervalTime">Seconds Per Set</label>
+    <button class="buttons" id="update">Update</button>
+  </div>
+
+
+  <h1 id="status">Set <span id="set#">1</span></h1>
+
+  <h2 id="seconds">60</h2>
+
+  <div class="start-stop">
+    <button class="start" id="start">Start</button>
+    <button class="stop" id="stop">Stop</button>
+  </div>
+</div>
+
+<%- include('partials/footer'); -%>
+
+<script type="text/javascript">
+  var seconds = 60;
+  var interval;
+
+  var intervalTime = 60;
+
+  var updateButton = document.getElementById("update");
+  var intervalInput = document.getElementById("intervalTime");
+
+  var startButton = document.getElementById("start");
+  var stopButton = document.getElementById("stop");
+  var sets = document.getElementById("set#");
+
+
+  var secondsSpan = document.getElementById("seconds");
+
+  updateButton.onclick = function() {
+    secondsSpan.innerHTML = intervalInput.value;
+    intervalTime = Math.floor(intervalInput.value * 1);
+    reset();
+  }
+
+  startButton.onclick = function() {
+    interval = setInterval(countdownSeconds, 1000);
+  }
+
+  function countdownSeconds() {
+    seconds -= 1;
+    secondsSpan.innerHTML = seconds;
+    if (seconds === 0) {
+            seconds = intervalTime + 1;
+            newSetNumber();
+        }
+  }
+
+  function newSetNumber() {
+      var sets = document.getElementById("set#");
+      var setNumber = sets.innerHTML;
+      setNumber++;
+      sets.innerHTML = setNumber;
+  }
+
+  stopButton.onclick = function() {
+    var setNumber = sets.innerHTML;
+    if (setNumber < 10) {
+      window.alert("Sets Completed: " + setNumber + ". Keep pushing until you hit 10.")
+    } else {
+      window.alert("Sets Completed: " + setNumber + ". Stay hard.");
+    }
+    reset();
+  }
+
+  function reset() {
+    clearInterval(interval);
+    seconds = intervalTime;
+    secondsSpan.innerHTML = seconds;
+    sets.innerHTML = 1;
+  }
+</script>

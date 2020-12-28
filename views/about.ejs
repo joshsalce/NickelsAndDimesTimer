@@ -1,0 +1,34 @@
+<%- include('partials/header'); -%>
+<div class="container">
+    <h1>About "Nickels and Dimes"</h1>
+
+    <p> <%= aboutContent1 %> </p>
+
+    <p> <%= aboutContent2 %> </p>
+    <hr>
+  <h1>Watch David Goggins talk about "Nickels and Dimes"</h1>
+</div>
+
+<div class="youtube">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Skqc95JlUYI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<%- include('partials/footer'); -%>
+
+<style>
+  .container {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 16px;
+  }
+
+  .youtube {
+    max-width: 560px;
+    max-height: 315px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+</style>
