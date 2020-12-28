@@ -1,5 +1,8 @@
 # NickelsAndDimesTimer
 Timer for "Nickels and Dimes" Workout EMOM (Every Minute on Minute)
+
+Youtube Demo: https://www.youtube.com/watch?v=xAYPi-6uOBo 
+
  
 ![alt text](https://github.com/joshsalce/NickelsAndDimesTimer/blob/main/Home.png)
 
