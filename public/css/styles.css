@@ -1,0 +1,83 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+ .container {
+   text-align: center;
+   margin: 0;
+   font-size: 20px;
+ }
+
+p.container {
+	background: rgba(0,0,0,.1);
+	padding: 10px;
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.container button {
+	padding: 7px;
+  border-radius: 20px;
+}
+
+input {
+	background: none;
+	border: 1px solid rgba(255,255,255,.8);
+	padding: 7px;
+	width: 50px;
+	text-align: center;
+}
+
+#status {
+  font-size: 50px;
+  text-align: center;
+}
+
+#seconds {
+  text-align: center;
+  font-size: 200px;
+}
+
+ .start-stop {
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+
+
+.footer-padding {
+	padding-bottom: 50px;
+}
+
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: darkblue;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #fff;
+}
